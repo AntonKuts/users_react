@@ -132,6 +132,10 @@ main {
   border: 4px outset #2F3061;
   float: none;
 }*/
+ /*.card {
+ width: auto;
+ height: 30px;
+ }*/
 
 .img1{
   /*margin-left: 45px;
@@ -177,6 +181,10 @@ span.red {
 
 .loading {
   font-size: 30px;
+}
+
+.none {
+  display: none;
 }
 
 .loading:after {

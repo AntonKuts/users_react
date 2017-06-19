@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import User from './user';
 import axios from 'axios';
 
 export default class Foto extends Component {
@@ -6,13 +7,12 @@ export default class Foto extends Component {
 state = {
   posts: [],
   loading: true,
-  error:null
+  error: null
 }
 
   componentDidMount() {
     axios.get('json.json')
       .then(res =>{
-        console.log(res);
         this.setState({
           posts: res.data,
           loading: false,
@@ -25,12 +25,12 @@ state = {
       });
     })
   }
+
   renderLoding(){
     return (
       <div>loading...</div>
     );
   }
-
 
   renderError(){
     return(
@@ -39,18 +39,15 @@ state = {
   }
   renderPosts(){
     const {error, posts} = this.state;
-    console.log(this.state);
     if(error){
       return this.renderError;
     }
+    console.log(this);
 
     return (
-      <div className="mainBox">
+      <div className={'mainBox '}>
         {posts.map(post => (
-          <div>
-          <p key={post.username}>{post.username}</p>
-          <img className="img1" src={post.pic} alt="#"/>
-          </div>
+          <User data={post} key={post.username}/>
         )
       )}
       </div>
