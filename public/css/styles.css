@@ -1,0 +1,202 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: auto;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a, p, h1, h2, h3, h4, h5, h6 {
+font-family: "ProximaNova";
+text-transform: uppercase;
+}
+
+a {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .8em;
+  text-decoration: none;
+}
+
+a:link {
+    color: #222;
+}
+
+a:visited {
+    color: #222;
+}
+
+a:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.10); /* Параметры тени */
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:active {
+    color: #222;
+}
+
+.kuts {
+  font-family: "Portrait";
+  color: #222;
+  letter-spacing: .16em;
+  font-size: 2.2em;
+  line-height: 120%;
+  text-decoration: none;
+}
+
+.topic {
+  font-family: "Portrait";
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: .50em;
+  font-size: 1.2em;
+  line-height: 100%;
+  text-align: center;
+}
+
+.boxForKuts {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid black;
+  height: 35px;
+}
+
+.footer {
+  width: 100%;
+  border-top: 1px solid black;
+  height: 35px;
+}
+
+li {
+  width: auto;
+  margin: 0 20px;
+}
+
+li::after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.liForMeny {
+float: left;
+}
+
+.app {
+  display: flex;
+}
+
+aside.primary-aside {
+  width: 200px;
+}
+
+aside.primary-aside a.active {
+    font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+
+.mainBox{
+  width: auto;
+  height: auto;
+  margin: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*.card{
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 4px outset #2F3061;
+  float: none;
+}*/
+
+.img1{
+  /*margin-left: 45px;
+  margin-top: 10px;*/
+  width: 150px;
+  height: 150px;
+  border: 4px outset #2F3061;
+}
+
+p {
+  font-family: "Portrait";
+  margin-bottom: 20px;
+  font-size: .8em;
+  letter-spacing: .07em;
+  line-height: 150%;
+  color: #343434;
+}
+
+.cardForText {
+  width: 260px;
+  height: auto;
+  margin: auto;
+}
+
+.cardForTextSmall1 {
+  width: 175px;
+  height: auto;
+  float: left;
+}
+
+.cardForTextSmall2 {
+  width: 80px;
+  height: auto;
+  float: right;
+}
+
+span.red {
+  color: red;
+}
+.left {
+  text-align: right;
+}
+
+.loading {
+  font-size: 30px;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
